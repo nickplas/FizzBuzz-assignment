@@ -15,7 +15,7 @@ public class FizzBuzz {
             if(i % 5==0){
                 s += "Buzz";
             }
-            if(s.equals("")){
+            if(s.isEmpty()){
                 System.out.println(i);
             }else{
                 System.out.println(s);
@@ -38,7 +38,7 @@ public class FizzBuzz {
                     s = "Fizz" + s;
                 }
             }
-            if(s.equals("")){
+            if(s.isEmpty()){
                 System.out.println(i);
             }else{
                 System.out.println(s);
