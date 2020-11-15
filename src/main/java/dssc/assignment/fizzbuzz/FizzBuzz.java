@@ -61,7 +61,7 @@ public class FizzBuzz {
     public void FizzBuzzBangFunctional(){
         IntStream str = IntStream.rangeClosed(1, 105);
         str.forEach( x -> { String s ="";
-                            s += (x % 7 == 0) ? (x % 5 ==0) ?  (x % 3 == 0) ? "FizzBuzzBang": "BuzzBang" : "Bang"  : "";
+                            s += (x % 7 == 0) ? (x % 5 ==0) ?  (x % 3 == 0) ? "FizzBuzzBang": "BuzzBang" : (x % 3==0) ? "FizzBang": "Bang"  : "";
                             System.out.println(s.isEmpty()? x : s);
                           }
         );
