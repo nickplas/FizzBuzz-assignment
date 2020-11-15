@@ -17,3 +17,13 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+jar{
+    manifest{
+        attributes(
+                'Main-class': 'dssc.assignment.fizzbuzz.FizzBuzz'
+        )
+    }
+
+
+}
