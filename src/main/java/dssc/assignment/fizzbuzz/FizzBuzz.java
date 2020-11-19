@@ -52,7 +52,7 @@ public class FizzBuzz {
         str.forEach( x -> {String s = "";
                             s +=  (x % 3 == 0) ? "Fizz" : "";
                             s +=  (x % 5 == 0) ? "Buzz" : "";
-                            System.out.println(s.isEmpty()? x : s);
+                            System.out.println(s.isEmpty()? Integer.toString (x) : s);
                           }
         );
 
@@ -61,8 +61,12 @@ public class FizzBuzz {
     public void FizzBuzzBangFunctional(){
         IntStream str = IntStream.rangeClosed(1, 105);
         str.forEach( x -> { String s ="";
-                            s += (x % 7 == 0) ? (x % 5 ==0) ?  (x % 3 == 0) ? "FizzBuzzBang": "BuzzBang" : (x % 3==0) ? "FizzBang": "Bang"  : "";
-                            System.out.println(s.isEmpty()? x : s);
+                            // In this way it prints the extended version without the assignment of the original problem
+                            //s += (x % 7 == 0) ? (x % 5 ==0) ?  (x % 3 == 0) ? "FizzBuzzBang": "BuzzBang" : (x % 3==0) ? "FizzBang": "Bang"  : "";
+                            s += ( x % 3 == 0 ) ? "Fizz" : "" ;
+                            s += ( x % 5 == 0 ) ? "Buzz" : "" ;
+                            s += ( x % 7 == 0 ) ? "Bang" : "" ;
+                            System.out.println(s.isEmpty()? Integer.toString(x) : s);
                           }
         );
     }
